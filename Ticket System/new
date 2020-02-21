@@ -1,0 +1,86 @@
+{
+  "name": "new",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "vQWmu",
+  "actions": [
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Error No Parameters :x:",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "EEETICKETSYSTEM",
+      "name": "Store Command Params"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket_channel",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket_channel",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "idk",
+      "name": "Store Server Data"
+    },
+    {
+      "channelName": "Ticket-${tempVars(\"idk\")}",
+      "topic": "__Ticket Number: ${tempVars(\"idk\")}__ User: ${member.user.tag}",
+      "position": "",
+      "storage": "1",
+      "varName": "e",
+      "name": "Create Text Channel"
+    },
+    {
+      "storage": "3",
+      "varName": "e",
+      "permission": "READ_MESSAGES",
+      "state": "1",
+      "name": "Set Channel Permissions"
+    },
+    {
+      "channel": "3",
+      "varName": "e",
+      "member": "1",
+      "varName2": "",
+      "permission": "READ_MESSAGES",
+      "state": "0",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "5",
+      "varName": "e",
+      "message": "Hello ${member}, [insert your messAGe here]\nReason: ${tempVars(\"EEETICKETSYSTEM\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_timeRestriction": 10
+}
