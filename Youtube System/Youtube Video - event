@@ -1,0 +1,190 @@
+{
+  "name": "Youtube Video",
+  "temp": "180",
+  "event-type": "3",
+  "_id": "fMuvs",
+  "actions": [
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${globalVars(\"youtube-channel\")}&key=${globalVars(\"apikey\")}&part=snippet&maxResults=1",
+      "path": "$.items[0].snippet.resourceId.videoId",
+      "storage": "1",
+      "varName": "videoid",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "dataName": "videoId",
+      "comparison": "1",
+      "value": "\"${tempVars(\"videoid\")}\"",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Global Data"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${globalVars(\"youtube-channel\")}&key=${globalVars(\"apikey\")}&part=snippet&maxResults=1",
+      "path": "$.items[0].snippet.channelId",
+      "storage": "1",
+      "varName": "channelId",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${globalVars(\"youtube-channel\")}&key=${globalVars(\"apikey\")}&part=snippet&maxResults=1",
+      "path": "$.items[0].snippet.channelTitle",
+      "storage": "1",
+      "varName": "channelTitle",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${globalVars(\"youtube-channel\")}&key=${globalVars(\"apikey\")}&part=snippet&maxResults=1",
+      "path": "$.items[0].snippet.title",
+      "storage": "1",
+      "varName": "videotitle",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${globalVars(\"youtube-channel\")}&key=${globalVars(\"apikey\")}&part=snippet&maxResults=1",
+      "path": "$.items[0].snippet.description",
+      "storage": "1",
+      "varName": "videodescription",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${globalVars(\"youtube-channel\")}&key=${globalVars(\"apikey\")}&part=snippet&maxResults=1",
+      "path": "$.items[0].snippet.thumbnails.default.url",
+      "storage": "1",
+      "varName": "videothumbnail",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${globalVars(\"youtube-channel\")}&key=${globalVars(\"apikey\")}&part=snippet&maxResults=1",
+      "path": "$.items[0].snippet.publishedAt",
+      "storage": "1",
+      "varName": "videopublishedAt",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "title": "${tempVars(\"channelTitle\")} just uploaded a new video!",
+      "author": "${tempVars(\"channelTitle\")}",
+      "color": "RANDOM",
+      "url": "https://www.youtube.com/watch?v=${tempVars(\"videoid\")}",
+      "authorIcon": "${client.user.displayAvatarURL}",
+      "authorUrl": "https://youtube.com/channel/${tempVars(\"channelId\")}",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"videothumbnail\")}",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"videodescription\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "time": "${tempVars(\"videopublishedAt\")}",
+      "storage": "1",
+      "varName": "videopublishedAtt",
+      "name": "Convert Timestamp to Date"
+    },
+    {
+      "comment": "👇 Please Change your Server ID Here 👇",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "find": "585411167510593536",
+      "storage": "1",
+      "varName": "server",
+      "name": "Find Server"
+    },
+    {
+      "server": "1",
+      "varName": "serverid",
+      "name": "Change Server"
+    },
+    {
+      "comment": "👇 Please Change your Channel ID Here 👇",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "find": "585411167510593538",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Published AT: ${tempVars(\"videopublishedAtt\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "dataName": "videoId",
+      "changeType": "0",
+      "value": "\"${tempVars(\"videoid\")}\"",
+      "name": "Control Global Data"
+    }
+  ]
+}
