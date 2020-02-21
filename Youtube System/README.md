@@ -1,6 +1,9 @@
 # Youtube System 
 Description: Your Bot will announce when there's a new video from a Specific Channel! 
 
+##Preview 
+Here'es a [Preview](https://i.imgur.com/SANxutL.gifv)
+
 # Requirements:
 ⭐ Latest Beta and Modifications Please install them [here.](https://github.com/dbm-network/mods/tree/beta)
 ⭐ Youtube API Key.
@@ -16,10 +19,6 @@ Please headover to the [Google Developer Console](https://console.developers.goo
 # What should i change?
 Please put your api key in the Command "youtube-setup", Edit Action #2 and replace "PLEASE PUT YOUR PI KEY HERE" with your API Key.
 Also Don't forget to modify the Youtube Video Event, Action #13 Please put your Server id and Action #16 your channel id.
-
-<img src="https://i.imgur.com/SANxutL.gifv"/>
-
-!(Preview)[https://i.imgur.com/SANxutL.gifv]
 
 # Bugs & Errors
 If there are any bugs or any errors, feel free to DM me on [Discord](https://discordapp.com/users/409356663833886740). 
