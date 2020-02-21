@@ -1,0 +1,485 @@
+{
+  "name": "Discord System Updates",
+  "temp": "300",
+  "event-type": "3",
+  "_id": "SfxlN",
+  "actions": [
+    {
+      "comment": "Store Data From Discord API.",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/status.json",
+      "path": "$.page.updated_at",
+      "storage": "1",
+      "varName": "updatedat",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/status.json",
+      "path": "$.status.indicator",
+      "storage": "1",
+      "varName": "indicator",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/status.json",
+      "path": "$.status.description",
+      "storage": "1",
+      "varName": "des",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/incidents.json",
+      "path": "$.incidents[0].name",
+      "storage": "1",
+      "varName": "incidents.name",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/incidents.json",
+      "path": "$.incidents[0].status",
+      "storage": "1",
+      "varName": "incidents.status",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/incidents.json",
+      "path": "$.incidents[0].impact",
+      "storage": "1",
+      "varName": "incidents.impact",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/incidents.json",
+      "path": "$.incidents[0].resolved_at",
+      "storage": "1",
+      "varName": "incidents.resolved_at",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/incidents.json",
+      "path": "$.incidents[0].shortlink",
+      "storage": "1",
+      "varName": "incidents.shortlink",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[1].status",
+      "storage": "1",
+      "varName": "euwest",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[3].status",
+      "storage": "1",
+      "varName": "eucentral",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[4].status",
+      "storage": "1",
+      "varName": "singapore",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[8].status",
+      "storage": "1",
+      "varName": "sydney",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[9].status",
+      "storage": "1",
+      "varName": "uscentral",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[10].status",
+      "storage": "1",
+      "varName": "useast",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[11].status",
+      "storage": "1",
+      "varName": "ussouth",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[12].status",
+      "storage": "1",
+      "varName": "uswest",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[13].status",
+      "storage": "1",
+      "varName": "Brazil",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[14].status",
+      "storage": "1",
+      "varName": "hongkong",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[15].status",
+      "storage": "1",
+      "varName": "russia",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[16].status",
+      "storage": "1",
+      "varName": "japan",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://srhpyqt94yxb.statuspage.io/api/v2/components.json",
+      "path": "$.components[17].status",
+      "storage": "1",
+      "varName": "southafrica",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "time": "${tempVars(\"updatedat\")}",
+      "storage": "1",
+      "varName": "date",
+      "name": "Convert Timestamp to Date"
+    },
+    {
+      "comment": "Embed Message",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "title": "Discord Status",
+      "author": "",
+      "color": "#970c58",
+      "url": "https://status.discordapp.com",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://bestanimations.com/Science/Gears/loadinggears/loading-gears-animation-13-2.gif",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "newembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Indicator",
+      "message": "${tempVars(\"indicator\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Description",
+      "message": "${tempVars(\"des\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Last updated AT:",
+      "message": "${tempVars(\"date\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Last incident",
+      "message": "${tempVars(\"incidents.name\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Status",
+      "message": "${tempVars(\"incidents.status\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Impact",
+      "message": "${tempVars(\"incidents.impact\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Short Link",
+      "message": "[Click me](${tempVars(\"incidents.shortlink\")})",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Resolved AT:",
+      "message": "${tempVars(\"incidents.resolved_at\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "EU West",
+      "message": "${tempVars(\"euwest\")}\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "EU Central",
+      "message": "${tempVars(\"eucentral\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Singapore",
+      "message": "${tempVars(\"singapore\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Sydney",
+      "message": "${tempVars(\"sydney\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "US Central",
+      "message": "${tempVars(\"uscentral\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "US East",
+      "message": "${tempVars(\"useast\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "US South",
+      "message": "${tempVars(\"ussouth\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "US West",
+      "message": "${tempVars(\"uswest\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Brazil",
+      "message": "${tempVars(\"Brazil\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "HongKong",
+      "message": "${tempVars(\"hongkong\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Russia",
+      "message": "${tempVars(\"russia\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "Japan",
+      "message": "${tempVars(\"japan\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "fieldName": "South Africa",
+      "message": "${tempVars(\"southafrica\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "message": "This messages updates every 5 minutes. Last Updated",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "comment": "Edit Embed",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "storage": "2",
+      "varName": "save-embed",
+      "storage2": "1",
+      "varName2": "newembed",
+      "name": "Edit Embed"
+    }
+  ]
+}
