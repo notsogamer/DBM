@@ -1,8 +1,8 @@
 # Youtube System 
 Description: Your Bot will announce when there's a new video from a Specific Channel! 
 
-##Preview 
-Here'es a [Preview](https://i.imgur.com/SANxutL.gifv)
+# Preview 
+Here's a [Preview](https://i.imgur.com/SANxutL.gifv)
 
 # Requirements:
 ⭐ Latest Beta and Modifications Please install them [here.](https://github.com/dbm-network/mods/tree/beta)
