@@ -1,0 +1,187 @@
+{
+  "name": "youtube-setup",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "MNBdx",
+  "actions": [
+    {
+      "comment": "⚠ Please SET YOUR API KEY HERE FOR THE COMMAND TO WORK! 👇",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "changeType": "0",
+      "value": "\"PLEASE PUT YOUR API KEY HERE\"",
+      "storage": "3",
+      "varName": "apikey",
+      "name": "Control Variable"
+    },
+    {
+      "comment": "⚠ Please SET YOUR API KEY HERE FOR THE COMMAND TO WORK! 👆",
+      "color": "#ff8000",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Hello and Welcome to the Youtube Setup. This System is created by GAMER#8962.\nLet's start - **Please send a youtube channel ID (Make sure it's Valid).**\nHere is an example: `UCEYFT6DgwTBDnadpWAQugpA`\n\n**Please make sure the ID is valid. Here is an example: `UCEYFT6DgwTBDnadpWAQugpA`\nDon't mess this up or there will be errors in your console.**\n\nNote: Type the Id only without the url E.g this > `UCEYFT6DgwTBDnadpWAQugpA` and not this `https://youtube.com/channel/UCEYFT6DgwTBDnadpWAQugpA`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "author.id === '${member.user.id}'",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "23",
+      "storage2": "1",
+      "varName2": "youtubelink",
+      "name": "Await Response Call Action"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Is this the channel you're trying to setup? Reply with Yes or No.\nhttps://www.youtube.com/channel/${tempVars(\"youtubelink\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "author.id === '${member.user.id}'",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "23",
+      "storage2": "1",
+      "varName2": "channelconfirmation",
+      "name": "Await Response Call Action"
+    },
+    {
+      "storage": "1",
+      "varName": "channelconfirmation",
+      "comparison": "1",
+      "value": "\"Yes\"",
+      "iftrue": "3",
+      "iftrueVal": "7",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "channelconfirmation",
+      "comparison": "1",
+      "value": "\"No\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Alright What is it? Please type it again.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "5",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please reply with Yes or No.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "7",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Sweet! Lemme just setup everything...",
+      "storage": "1",
+      "varName2": "msgtoedit",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/channels?id=${tempVars(\"youtubelink\")}&key=${globalVars(\"apikey\")}&part=contentDetails",
+      "path": "$.items[0].contentDetails.relatedPlaylists.uploads",
+      "storage": "3",
+      "varName": "youtube-channel",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "storage": "3",
+      "varName": "youtube-channel",
+      "name": "Save Variable"
+    },
+    {
+      "storage": "3",
+      "varName": "apikey",
+      "name": "Save Variable"
+    },
+    {
+      "time": "3",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "msgtoedit",
+      "message": "Success I've finished everything for you.",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Time up! Please run the command again! ${member}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
