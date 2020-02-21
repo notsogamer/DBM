@@ -1,0 +1,52 @@
+{
+  "name": "discord-system",
+  "_id": "SfxlN",
+  "actions": [
+    {
+      "title": "Discord Status",
+      "author": "",
+      "color": "#970c58",
+      "url": "https://status.discordapp.com",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://bestanimations.com/Science/Gears/loadinggears/loading-gears-animation-13-2.gif",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "newembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "message": "Hold tight I'm setting everything up. This message should get updated within 5 minutes.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "newembed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "2",
+      "varName3": "save-embed",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "2",
+      "varName": "save-embed",
+      "name": "Save Variable"
+    }
+  ],
+  "restriction": "4"
+}
