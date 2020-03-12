@@ -5,9 +5,9 @@ Description: Your Bot will announce when there's a new video from a Specific Cha
 Here's a [Preview](https://i.imgur.com/SANxutL.gifv)
 
 # Requirements:
-⭐ Latest Beta and Modifications Please install them [here.](https://github.com/dbm-network/mods/tree/beta)
-⭐ Youtube API Key.
-⭐ You also need a Brain.
+* Latest Beta and Modifications Please install them [here.](https://github.com/dbm-network/mods/tree/beta)
+* Youtube API Key.
+* You also need a Brain.
 
 # How to install?
 Please copy and paste the Youtube Video Event and paste it in the Events Tab.
