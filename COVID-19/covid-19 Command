@@ -1,0 +1,305 @@
+{
+  "name": "covid-19",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "hnWPf",
+  "actions": [
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "15",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/all",
+      "path": "",
+      "storage": "1",
+      "varName": "data",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "data",
+      "path": "$.cases",
+      "storage": "1",
+      "varName": "cases",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "data",
+      "path": "$.deaths",
+      "storage": "1",
+      "varName": "deaths",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "data",
+      "path": "$.recovered",
+      "storage": "1",
+      "varName": "recovered",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "data",
+      "path": "$.updated",
+      "storage": "1",
+      "varName": "lastupdated",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "title": "COVID-19 Updates",
+      "author": "${member.user.username}",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "${member.user.displayAvatarURL}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Total Cases",
+      "message": "${tempVars(\"cases\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Deaths",
+      "message": "${tempVars(\"deaths\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Recovered",
+      "message": "${tempVars(\"recovered\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "time": "${tempVars(\"lastupdated\")}",
+      "storage": "1",
+      "varName": "lastupdatedd",
+      "name": "Convert Timestamp to Date"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Last Updated",
+      "message": "${tempVars(\"lastupdatedd\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "countryy",
+      "name": "Store Command Params"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/countries/${tempVars(\"countryy\")}",
+      "path": "",
+      "storage": "1",
+      "varName": "country",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "storage": "1",
+      "varName": "country",
+      "comparison": "1",
+      "value": "\"Country not found\"",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Country not found.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "country",
+      "path": "$.country",
+      "storage": "1",
+      "varName": "name",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "country",
+      "path": "$.cases",
+      "storage": "1",
+      "varName": "countrycases",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "country",
+      "path": "$.todayCases",
+      "storage": "1",
+      "varName": "countrytodaycases",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "country",
+      "path": "$.deaths",
+      "storage": "1",
+      "varName": "countrydeaths",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "country",
+      "path": "$.todayDeaths",
+      "storage": "1",
+      "varName": "countrytodaydeaths",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "country",
+      "path": "$.recovered",
+      "storage": "1",
+      "varName": "countryrecovered",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "country",
+      "path": "$.critical",
+      "storage": "1",
+      "varName": "countrycritical",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "title": "${tempVars(\"name\")}'s Updates",
+      "author": "${member.user.username}",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "${member.user.displayAvatarURL}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Cases",
+      "message": "${tempVars(\"countrycases\")} (Today: ${tempVars(\"countrytodaycases\")})",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Deaths",
+      "message": "${tempVars(\"countrydeaths\")} (Today: ${tempVars(\"countrytodaydeaths\")})",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Recovered",
+      "message": "${tempVars(\"countryrecovered\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Critical",
+      "message": "${tempVars(\"countrycritical\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
